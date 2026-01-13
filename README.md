@@ -19,7 +19,7 @@ Group 10
 
 ## System Archtecture
 
-[...](https://drive.google.com/file/d/1-cw2b646HtTUPMaN5KLjdWXnr5V8eOKA/view?usp=drive_link)
+<a href="https://drive.google.com/file/d/1-cw2b646HtTUPMaN5KLjdWXnr5V8eOKA/view?usp=drive_link">https://drive.google.com/file/d/1-cw2b646HtTUPMaN5KLjdWXnr5V8eOKA/view?usp=drive_link</a>
 
 ## Scrum board
 
