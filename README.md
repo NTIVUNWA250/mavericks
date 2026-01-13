@@ -21,7 +21,7 @@ Group 10
 
 ### Scrum board
 
-...
+<a href="https://trello.com/invite/b/69653651397005213e652d1a/ATTI1da4cb5334fc2e4b318a55886313ada03D049AB5/momo-sms-processor-dashboard">Scrum Board Link...
 
 ## Usage
 
