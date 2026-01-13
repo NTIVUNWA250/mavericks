@@ -6,10 +6,10 @@ This is a project designated to design a website that processes MoMo SMS data in
 Group 10
 
 ## Members of the group
--NTIVUNWA Gilbert
--MUNEZERO Bonheur Divin
--CYUZUZO BANA Terance
--Tony
+- NTIVUNWA Gilbert
+- MUNEZERO Bonheur Divin
+- CYUZUZO BANA Terance
+- NIYONKURU MITALI Robert Tony
 
 # Links
 ## System Archtecture
