@@ -1,10 +1,11 @@
 #This is a mysql code to make MOMO transanction database using MySQL
 
-CREATE DATABASE momodb;
+CREATE DATABASE IF NOT EXISTS momodb;
+USE momodb;
 
 CREATE TABLE User (
 	user_id INT AUTO_INCREMENT PRIMARY KEY,
-	username VARCHAR,
+	username VARCHAR(50),
 	phone VARCHAR(50),
 	password VARCHAR(50)
 );
