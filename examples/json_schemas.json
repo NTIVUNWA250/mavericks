@@ -1,0 +1,99 @@
+{
+  "user": {
+    "user_id": 12,
+    "username": "group_10",
+    "phone": "+250780000000",
+    "password": "password@123",
+    "roles": [
+      {
+        "role_id": 1,
+        "role_name": "Sender"
+      },
+      {
+        "role_id": 2,
+        "role_name": "Receiver"
+      }
+    ]
+  },
+
+  "role": {
+    "role_id": 1,
+    "role_name": "Sender"
+  },
+
+  "user_roles": {
+    "link_id": 5,
+    "user": {
+      "user_id": 12,
+      "username": "group_10"
+    },
+    "role": {
+      "role_id": 1,
+      "role_name": "Sender"
+    }
+  },
+
+  "category": {
+    "category_id": 3,
+    "category_name": "Transfer"
+  },
+
+  "system_log": {
+    "log_id": 101,
+    "user_id": 12,
+    "endpoint": "/api/transactions/upload",
+    "status_code": 200,
+    "execution_time_ms": 142.8
+  },
+
+  "transaction": {
+    "transaction_id": 501,
+    "amount": 4500.75,
+    "timestamp": "2026-01-23T14:35:22Z",
+    "currency": "RWF",
+    "sender_id": 12,
+    "receiver_id": 20,
+    "category_id": 3
+  },
+
+  "full_transaction": {
+    "transaction_id": 501,
+    "amount": 4500.75,
+    "timestamp": "2026-01-23T14:35:22Z",
+    "currency": "RWF",
+    "category": {
+      "category_id": 3,
+      "category_name": "Transfer"
+    },
+    "sender": {
+      "user_id": 12,
+      "username": "group_10",
+      "phone": "+250780000000",
+      "roles": [
+        {
+          "role_id": 1,
+          "role_name": "Sender"
+        }
+      ]
+    },
+    "receiver": {
+      "user_id": 20,
+      "username": "group_11",
+      "phone": "+250781111111",
+      "roles": [
+        {
+          "role_id": 2,
+          "role_name": "Receiver"
+        }
+      ]
+    },
+    "system_logs": [
+      {
+        "log_id": 101,
+        "endpoint": "/api/transactions/upload",
+        "status_code": 200,
+        "execution_time_ms": 142.8
+      }
+    ]
+  }
+}
