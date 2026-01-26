@@ -33,6 +33,14 @@ Group 10
 
 <a href="https://docs.google.com/document/d/16oIJLtl-AD3HwPKPV8Ql4VqmlUuKjbo4LZriNAMn1_w/edit?usp=sharing">Database Design Document on GOOGLE DRIVE</a>
 
+### TEAM TASK SHEET LINK
+
+<a href="https://docs.google.com/spreadsheets/d/1ppa5uTeBi0YLsOZ3MW28Z7nH5G65H0UAycVMeB2_LDg/edit?usp=sharing">TEAM 10'S Task Sheet</a>
+
+### AI LOG LINK
+
+<a href="https://docs.google.com/document/d/1w_hG_I_EX6q-3K8hr3H5RfQN4KXvGMDsHAUrzpND4mo/edit?usp=sharing">TEAM 10'S AI LOG</a>
+
 ## Usage
 
 ...
