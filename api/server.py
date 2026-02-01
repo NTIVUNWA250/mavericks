@@ -4,6 +4,9 @@ import json
 from urllib.parse import urlparse
 
 from routes_get import get_all_transactions, get_transaction_by_id
+from routes_post import create_transaction
+from routes_put import update_transaction
+from routes_delete import delete_transaction
 
 
 USERNAME = "admin"
@@ -59,6 +62,81 @@ class RequestHandler(BaseHTTPRequestHandler):
             tx_id = path.split("/")[-1]
             status, data = get_transaction_by_id(tx_id)
 
+            self.send_response(status)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(data.encode())
+            return
+
+        # Invalid route
+        self.send_response(404)
+        self.end_headers()
+        self.wfile.write(b"Not Found")
+
+    # ----------------------------------------
+    # POST REQUESTS
+    # ----------------------------------------
+    def do_POST(self):
+        if not self.authenticate():
+            return
+
+        path = urlparse(self.path).path
+
+        if path == "/transactions":
+            content_length = int(self.headers.get("Content-Length", 0))
+            body = self.rfile.read(content_length).decode("utf-8")
+
+            status, data = create_transaction(body)
+            self.send_response(status)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(data.encode())
+            return
+
+        # Invalid route
+        self.send_response(404)
+        self.end_headers()
+        self.wfile.write(b"Not Found")
+
+    # ----------------------------------------
+    # PUT REQUESTS
+    # ----------------------------------------
+    def do_PUT(self):
+        if not self.authenticate():
+            return
+
+        path = urlparse(self.path).path
+
+        if path.startswith("/transactions/"):
+            tx_id = path.split("/")[-1]
+            content_length = int(self.headers.get("Content-Length", 0))
+            body = self.rfile.read(content_length).decode("utf-8")
+
+            status, data = update_transaction(tx_id, body)
+            self.send_response(status)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(data.encode())
+            return
+
+        # Invalid route
+        self.send_response(404)
+        self.end_headers()
+        self.wfile.write(b"Not Found")
+
+    # ----------------------------------------
+    # DELETE REQUESTS
+    # ----------------------------------------
+    def do_DELETE(self):
+        if not self.authenticate():
+            return
+
+        path = urlparse(self.path).path
+
+        if path.startswith("/transactions/"):
+            tx_id = path.split("/")[-1]
+
+            status, data = delete_transaction(tx_id)
             self.send_response(status)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
