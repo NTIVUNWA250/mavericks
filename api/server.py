@@ -55,7 +55,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.send_response(status)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(data.encode())
+            self.wfile.write(data.encode() + b"\n")
             return
 
         if path.startswith("/transactions/"):
