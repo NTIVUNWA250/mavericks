@@ -36,6 +36,7 @@ Group 10
 ### TEAM TASK SHEET LINK
 
 <a href="https://docs.google.com/spreadsheets/d/1ppa5uTeBi0YLsOZ3MW28Z7nH5G65H0UAycVMeB2_LDg/edit?usp=sharing">TEAM 10'S Task Sheet</a>
+<a href="https://docs.google.com/spreadsheets/d/1iSsku9zJ-dg_4pZOBT6pemPBa4abtY70jfKUK1JXh5E/edit?usp=sharing">TEAM 10' Building rest Api task sheet</a>
 
 ### AI LOG LINK
 
