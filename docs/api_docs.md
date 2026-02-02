@@ -92,7 +92,7 @@ The API usees Basic Auth and it includes an Authorization header in every reques
 | 401  | Unauthorized | Missing auth credentials                                              |
 | 404  | Not Found    | The requested endpoint is not present or transaction ID doesnot exist |
 
-The API usees Basic Auth and it includes an Authorization header in every request made.
+### Security and Accuracy logic
 
 1. **Authorization Guard**: every req made is supposed to pass through the `authenticate()` check before being allowed to reach the route logic
 2. **INput Validation**: `POST` and `PUT` methods verifies that the req body is valid JSON
