@@ -37,7 +37,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.send_response(401)
             self.send_header("WWW-Authenticate", "Basic realm='Access Denied'")
             self.end_headers()
-            self.wfile.write(b"Unauthorized")
+            self.wfile.write(b"Unauthorized\n")
             return False
         return True
 
@@ -65,13 +65,13 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.send_response(status)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(data.encode())
+            self.wfile.write(data.encode() + b"\n")
             return
 
         # Invalid route
         self.send_response(404)
         self.end_headers()
-        self.wfile.write(b"Not Found")
+        self.wfile.write(b"Not Found\n")
 
     # ----------------------------------------
     # POST REQUESTS
@@ -90,13 +90,13 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.send_response(status)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(data.encode())
+            self.wfile.write(data.encode() + b"\n")
             return
 
         # Invalid route
         self.send_response(404)
         self.end_headers()
-        self.wfile.write(b"Not Found")
+        self.wfile.write(b"Not Found\n")
 
     # ----------------------------------------
     # PUT REQUESTS
@@ -116,13 +116,13 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.send_response(status)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(data.encode())
+            self.wfile.write(data.encode() + b"\n")
             return
 
         # Invalid route
         self.send_response(404)
         self.end_headers()
-        self.wfile.write(b"Not Found")
+        self.wfile.write(b"Not Found\n")
 
     # ----------------------------------------
     # DELETE REQUESTS
@@ -140,13 +140,13 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.send_response(status)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
-            self.wfile.write(data.encode())
+            self.wfile.write(data.encode() + b"\n")
             return
 
         # Invalid route
         self.send_response(404)
         self.end_headers()
-        self.wfile.write(b"Not Found")
+        self.wfile.write(b"Not Found\n")
 
 
 def run_server():
